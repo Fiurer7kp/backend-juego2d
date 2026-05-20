@@ -7,11 +7,9 @@ databases:
 services:
   - type: web
     name: ashen-crown-backend
-    env: java
+    env: docker
     region: oregon
     plan: free
-    buildCommand: cd backend && mvn clean package -DskipTests
-    startCommand: java -jar backend/target/ashen-crown-backend-1.0.0.jar
     envVars:
       - key: SPRING_PROFILES_ACTIVE
         value: prod
